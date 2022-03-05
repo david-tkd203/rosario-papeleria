@@ -1,0 +1,42 @@
+footer {
+  width: 80vw;
+  margin-inline: auto;
+  margin-block: 3rem;
+}
+
+.footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.landing-copy {
+  p:nth-child(2) {
+    font-size: 0.9rem;
+  }
+}
+
+:is(.landing-copy, .social-media) p:first-child {
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.social-media a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.3rem;
+  margin-inline: 0.3rem;
+}
+
+.social-media a[href*="facebook"] {
+  color: #3b5997;
+}
+
+.social-media a[href*="instagram"] {
+  color: #d82e7e;
+}
+
+.social-media a[href*="twitter"] {
+  color: #41b7d8;
+}

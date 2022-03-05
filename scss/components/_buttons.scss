@@ -1,0 +1,82 @@
+@use "../base/variables";
+.c-button {
+  background-color: transparent;
+  border: solid 2px variables.$pink-text;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  border-radius: 99999px;
+  color: variables.$black;
+  font-weight: 700;
+  transition: all ease 0.3s;
+  &--primary {
+    background-color: variables.$pink-text;
+  }
+  
+  &:hover {
+    $color-hover: darken(variables.$pink-text, 10);
+    background-color: $color-hover;
+    border-color: $color-hover;
+    transition: all ease 0.3s;
+  }
+}
+
+.product__button {
+  margin-top: auto;
+  bottom: 0;
+  background-color: variables.$pink-text;
+  outline: none;
+  border: none;
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+  padding: 0.7rem 1.5rem;
+  @include variables.opensans(1rem);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all ease 0.3s;
+
+  &:hover {
+    $color-hover: darken(variables.$pink-text, 10);
+    background-color: $color-hover;
+    border-color: $color-hover;
+    transition: all ease 0.3s;
+  }
+}
+
+
+form button[type='submit'] {
+  background-color: variables.$pink-text;
+  outline: none;
+  border: none;
+  border-radius: 9999px;
+  padding: 0.7rem 1.5rem;
+  @include variables.opensans(1rem);
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: all ease 0.3s;
+
+  &:hover {
+    $color-hover: darken(variables.$pink-text, 10);
+    background-color: $color-hover;
+    border-color: $color-hover;
+    transition: all ease 0.3s;
+  }
+}
+
+form button[type='reset'] {
+  background-color: transparent;
+  border: solid 2px variables.$pink-text;
+  padding: 0.7rem 1.5rem;
+  text-decoration: none;
+  border-radius: 99999px;
+  color: variables.$black;
+  font-weight: 700;
+  transition: all ease 0.3s;
+  @include variables.opensans(1rem);
+
+  &:hover {
+    $color-hover: darken(variables.$pink-text, 10);
+    border-color: $color-hover;
+    transition: all ease 0.3s;
+  }
+}

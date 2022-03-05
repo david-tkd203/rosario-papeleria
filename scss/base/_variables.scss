@@ -1,0 +1,13 @@
+/*Colors*/
+$primary: #ffcad4;
+$light-blue: #D8E2DC;
+$light-pink: #FFE5D9;
+$pink-text: #F4ACB7;
+$accent: #9D8189;
+$white: white;
+$black: black;
+
+@mixin opensans($size) {
+  font-family: 'Open Sans', sans-serif;
+  font-size: $size;
+}

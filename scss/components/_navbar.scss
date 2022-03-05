@@ -1,0 +1,143 @@
+@use "../base/variables";
+@use "../base/breakpoints";
+
+header {
+  border-bottom: solid 1px variables.$primary ;
+  width: 90vw;
+  margin-inline: auto;
+  position: relative;
+}
+
+.c-navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 80vw;
+  padding-block: 0.7rem;
+  margin-inline: auto;
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.links {
+  @include breakpoints.responsive('lg', max) {
+    display: none !important;
+  }
+}
+
+.links.is-active {
+  display: flex !important;
+  flex-flow: column nowrap;
+  position: absolute;
+  top: 4.5rem;
+  right: 0;
+  z-index: 8;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+#shop-cart span {
+  @include breakpoints.responsive('lg', max) {
+    display: none;
+  }
+}
+
+.c-navbar__menu {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  li {
+    font-weight: 700;
+    color: variables.$black;
+    line-height: 1.5;
+
+    a.is-active {
+      color: darken(variables.$pink-text, 15);
+    }
+  }
+}
+
+.c-navbar__account {
+  border-radius: 50%;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  img {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+  }
+}
+
+.carousel {
+  width: 45vw !important;
+  @include breakpoints.responsive('md', max) {
+    width: 70vw !important;
+    margin-inline: auto;
+  }
+}
+
+.carousel-img {
+  width: 45vw;
+  height: 350px;
+  @include breakpoints.responsive('md', max) {
+    width: 70vw;
+  }
+}
+
+.c-navbar__burger {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  height: fit-content;
+}
+
+#burger-menu {
+  @include breakpoints.responsive('lg', min) {
+    display: none;
+  }
+}
+
+@mixin burgerbar {
+  cursor: pointer;
+  display: inline-block;
+  height: 4px;
+  width: 1.7rem;
+  background-color: black;
+  border-radius: 999px;
+}
+
+$burger-sep: 0.49rem;
+
+.burger-menu {
+  @include burgerbar;
+  position: relative;
+
+
+  &:before {
+    @include burgerbar;
+    content: "";
+    position: absolute;
+    bottom: $burger-sep;
+    left: 0;
+  }
+
+  &:after {
+    @include burgerbar;
+    content: "";
+    position: absolute;
+    top: $burger-sep;
+    left: 0;
+  }
+
+}

@@ -1,0 +1,16 @@
+.section {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 90vw;
+  margin-inline: auto;
+  margin-top: 4rem;
+  margin-bottom: 10rem;
+
+  h2 {
+    margin-block: 3rem;
+    font-size: 2rem;
+    letter-spacing: -1px;
+    font-weight: 700;
+    align-self: center;
+  }
+}

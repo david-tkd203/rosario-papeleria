@@ -1,0 +1,65 @@
+@use "../base/variables";
+@use "../base/breakpoints";
+
+.main-contact {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-block: 5rem;
+  width: 70vw;
+  margin-inline: auto;
+
+  h1 {
+    letter-spacing: -1px;
+  }
+
+  form {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.8rem;
+    width: 100%;
+    @include breakpoints.responsive('lg', min) {
+      width: 60%;
+    }
+  }
+}
+
+form textarea {
+  resize: none;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 11px;
+  border: solid 3px variables.$pink-text;
+}
+
+form label {
+  font-weight: 500;
+}
+
+form input {
+  padding: 0.7rem 1.5rem;
+  outline: none;
+  border: none;
+  border-bottom: solid 3px variables.$pink-text;
+  transition: all ease 0.1s;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+
+  &::placeholder {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+  }
+}
+
+.form-actions {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  margin-left: auto;
+  @include breakpoints.responsive('lg', min) {
+    flex-direction: row;
+  }
+}

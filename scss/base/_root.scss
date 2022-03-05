@@ -1,0 +1,18 @@
+@use "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color: darken(variables.$pink-text, 30);
+}

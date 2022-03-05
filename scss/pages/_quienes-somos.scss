@@ -1,0 +1,20 @@
+.main-who {
+  width: 80vw;
+  margin-block: 3rem;
+  margin-inline: auto;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+  align-items: flex-start;
+
+  h1 {
+    letter-spacing: -2px;
+    align-self: center;
+  }
+}
+
+.who-cta {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}

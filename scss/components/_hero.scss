@@ -1,0 +1,42 @@
+@use "../base/variables";
+@use "../base/breakpoints";
+
+.hero {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 80vw;
+  margin-inline: auto;
+  margin-block: 3rem;
+  gap: 2rem;
+  @include breakpoints.responsive('md', max) {
+    flex-direction: column;
+  }
+}
+
+.hero__cta {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  gap: 1rem;
+  align-self: center;
+
+  h1 {
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: -2px;
+  }
+}
+
+.text-accent {
+  position: relative;
+  &:after {
+    content: '';
+    bottom: 0.3rem;
+    left: 0;
+    position: absolute;
+    width: 4ch;
+    height: 9px;
+    z-index: -1;
+    background-color: variables.$pink-text;
+  }
+}

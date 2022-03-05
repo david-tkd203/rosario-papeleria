@@ -1,0 +1,73 @@
+@use "../base/variables";
+@use "../base/breakpoints";
+
+.product {
+  position: relative;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 9rem;
+  gap: 1rem;
+  border-radius: 11px;
+  border: solid 1px variables.$primary;
+
+  @include breakpoints.responsive('md', min) {
+    width: 11rem;
+  }
+
+  @include breakpoints.responsive('lg', min) {
+    width: 16rem;
+  }
+}
+
+.product__img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  border-top-right-radius: 11px;
+  border-top-left-radius: 11px;
+}
+
+.product__info {
+  padding-inline: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  width: 100%;
+
+  p {
+    font-size: 0.9rem;
+  }
+}
+
+.product__wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.product__price {
+  &--old {
+    font-size: 0.8rem;
+    text-decoration: line-through;
+    color: gray;
+  }
+
+  &--new {
+    font-weight: 700;
+    font-size: 1.2rem;
+  }
+}
+
+.products {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+  gap: 3rem;
+
+  @include breakpoints.responsive('sm', max) {
+    gap: 1rem;
+  }
+
+  @include breakpoints.responsive('md', max) {
+    gap: 2rem;
+  }
+}
